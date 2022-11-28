@@ -1,0 +1,22 @@
+on:
+  push:
+  
+name: Test Transition Issue
+
+jobs:
+  test-transition-issue:
+    name: Transition Issue
+    runs-on: ubuntu-latest
+    steps:
+    - name: Login
+      uses: atlassian/gajira-login@v3
+      env:
+        JIRA_BASE_URL: "https://api3087.atlassian.net/"
+        JIRA_USER_EMAIL: "prasad.k.rampure@apisero.com"
+        JIRA_API_TOKEN: "ahrOC2ZTi6pgyPF6pN847994"
+        
+    - name: Transition issue
+      uses: atlassian/gajira-transition@v3
+      with:
+        issue: "FA-3"
+        transition: "In progress"
