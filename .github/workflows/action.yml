@@ -15,7 +15,7 @@ jobs:
       env:
         JIRA_BASE_URL: "https://api3087.atlassian.net/"
         JIRA_USER_EMAIL: "prasad.k.rampure@apisero.com" 
-        JIRA_API_TOKEN: "ahrOC2ZTi6pgyPF6pN847994"
+        JIRA_API_TOKEN: "epijmaOeHrfUQe3HzpIX6ED5"
         
     - name: Find Issue Key
       id: find
