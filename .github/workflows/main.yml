@@ -19,4 +19,4 @@ jobs:
       uses: atlassian/gajira-transition@v3
       with:
         issue: "FA-3"
-        transition: "In progress"
+        transition: "Ready For CodeReview"
