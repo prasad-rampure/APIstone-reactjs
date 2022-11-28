@@ -18,7 +18,7 @@ https://user-images.githubusercontent.com/58553711/157734548-45e097f2-d841-4a84-
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/cc500adb-5279-4240-9ff1-26be38ac6130/deploy-status)](https://covid19-tracker9.netlify.app/)
 
-## Video Description by me
+## Video Description by mee
 
 [see my video from here](https://www.loom.com/share/abd3e97140784135bbc8ddbf2906bb86)
 
