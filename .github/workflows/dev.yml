@@ -1,0 +1,38 @@
+name: Github to Jira integration
+
+on:
+  pull_request: 
+    branches: 
+      - main
+
+jobs:
+  PrRequest:
+    name: Transition Issu
+    runs-on: ubuntu-latest
+    steps:
+    - name: Login
+      uses: atlassian/gajira-login@master
+      env:
+        JIRA_BASE_URL: "https://api3087.atlassian.net/"
+        JIRA_USER_EMAIL: "prasad.k.rampure@apisero.com"
+        JIRA_API_TOKEN: "ahrOC2ZTi6pgyPF6pN847994"
+        
+    - name: Find Issue Key
+      id: find2
+      uses: atlassian/gajira-find-issue-key@v2.0.2
+      with: 
+        string: ${{ github.event.pull_request.title }}
+        from: ""
+        
+        
+    - name: Transition issue
+      uses: atlassian/gajira-transition@master
+      with:
+        issue: ${{ steps.find2.outputs.issue }}
+        transition: "Ready For CodeReview"
+        
+    - name: Comment on issue
+      uses: atlassian/gajira-comment@master
+      with:
+        issue: ${{ steps.find2.outputs.issue }}
+        comment: "${{ steps.find2.outputs.issue }} pushed to repository: ${{ github.event.repository.full_name }}"
