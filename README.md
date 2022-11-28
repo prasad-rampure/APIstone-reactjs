@@ -3,7 +3,7 @@
 
 <!-- Feel Free to Add, Update, Delete Any Section you find needs so -->
 
-# Covid19-Tracker 🦠
+# Covid19-Track
 
 > This is my react capstone project. The project is talking about covid cases in all countries in the world and also displays all the information details to each country with all covid cases or recovered cases.
 
